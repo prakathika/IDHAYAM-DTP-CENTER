@@ -32,11 +32,11 @@ export default function Hero() {
                   Explore Services
                   <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
                 </span>
-                <span className="absolute inset-0 bg-gradient-to-t from-primary/50 to-transparent transition-all duration-300 group-hover:from-primary/80" />
               </Button>
             </a>
             <a href="#contact">
-               <Button size="lg" variant="outline" className="text-lg font-bold relative inline-flex h-14 items-center justify-center overflow-hidden rounded-full border-primary/50 px-8 text-primary-foreground transition-all duration-300 hover:scale-105 hover:bg-primary/10 hover:shadow-lg hover:shadow-primary/30">
+               <Button size="lg" variant="outline" className="text-lg font-bold group relative inline-flex h-14 items-center justify-center overflow-hidden rounded-full border-2 border-primary/50 bg-transparent px-8 text-primary transition-all duration-300 hover:scale-105 hover:bg-transparent hover:text-foreground hover:shadow-lg hover:shadow-primary/30">
+                <span className="absolute h-0 w-0 rounded-full bg-primary/20 transition-all duration-300 group-hover:h-56 group-hover:w-56"></span>
                 <span className="relative z-10 flex items-center gap-2">
                   <Phone className="h-5 w-5" />
                   Get in Touch
