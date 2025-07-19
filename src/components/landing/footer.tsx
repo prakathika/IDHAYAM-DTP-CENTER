@@ -2,6 +2,8 @@ import Link from 'next/link';
 import { CircuitBoard, Facebook, Instagram, Twitter } from 'lucide-react';
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="bg-secondary/50 border-t">
       <div className="container mx-auto py-6 px-4 md:px-6">
@@ -11,7 +13,7 @@ export default function Footer() {
                 <span className="font-headline text-lg font-bold text-primary">IDHAYAM DTP CENTER</span>
             </div>
             <p className="text-sm text-foreground/60 text-center sm:text-left">
-                © {new Date().getFullYear()} Idhayam DTP Center. All rights reserved.
+                © {currentYear} Idhayam DTP Center. All rights reserved.
                 <br />
                 Managed by <span className="font-semibold text-primary">Jagadeesan</span>.
             </p>

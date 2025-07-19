@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Phone } from 'lucide-react';
+import { ArrowRight, Phone, Zap } from 'lucide-react';
 
 export default function Hero() {
   return (
@@ -9,6 +9,13 @@ export default function Hero() {
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="flex flex-col items-center text-center space-y-8">
+            <div className="relative inline-flex">
+                <div className="animate-pulse-slow absolute -inset-2 bg-primary/20 rounded-full blur-xl"></div>
+                <div className="relative inline-flex items-center justify-center bg-background p-4 rounded-full mb-4 ring-2 ring-primary/20">
+                    <Zap className="h-12 w-12 text-primary animate-[pulse_5s_ease-in-out_infinite]" strokeWidth={1.5} />
+                </div>
+            </div>
+
           <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter">
             IDHAYAM DTP CENTER
           </h1>
@@ -20,6 +27,7 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
             <a href="#services">
               <Button size="lg" className="group text-lg font-bold relative inline-flex h-14 items-center justify-center overflow-hidden rounded-full bg-primary px-8 text-primary-foreground transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/50">
+                <span className="absolute -inset-full animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)] transition-opacity duration-500 group-hover:opacity-100"></span>
                 <span className="relative z-10 flex items-center gap-2">
                   Explore Services
                   <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
