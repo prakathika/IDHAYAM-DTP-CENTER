@@ -1,12 +1,17 @@
 import React from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { 
     FileText, Landmark, Shield, GraduationCap, FileHeart, Link2, 
     Bus, CircleUser, Home, Award, Fingerprint, Banknote, Briefcase, 
-    UserCheck, BookUser, Building, University, FileSearch, Globe
+    UserCheck, BookUser, Building, University, FileSearch, Globe,
+    Printer, ScanLine, FileImage, CreditCard
 } from 'lucide-react';
 
 const services = [
+    { icon: <Printer />, title: 'Xerox' },
+    { icon: <ScanLine />, title: 'Printout' },
+    { icon: <FileImage />, title: 'Lamination' },
+    { icon: <CreditCard />, title: 'Aadhar Card' },
     { icon: <FileText />, title: 'GST Services' },
     { icon: <Landmark />, title: 'India Post' },
     { icon: <Shield />, title: 'Indian Air Force/Army Jobs' },
