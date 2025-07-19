@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, BookOpen } from 'lucide-react';
+import { Menu, Heart } from 'lucide-react';
 
 const navLinks = [
   { href: '#home', label: 'Home' },
@@ -17,18 +17,19 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${isScrolled ? 'bg-background/80 backdrop-blur-sm shadow-md' : 'bg-transparent'}`}>
+    <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${isScrolled ? 'bg-background/80 backdrop-blur-lg shadow-md' : 'bg-transparent'}`}>
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
-        <Link href="/" className="flex items-center gap-2 font-headline text-2xl font-bold text-primary">
-          <BookOpen className="h-7 w-7" />
-          <span>Edugo</span>
+        <Link href="#home" className="flex items-center gap-2.5 font-headline text-2xl font-bold text-primary">
+          <Heart className="h-7 w-7" />
+          <span className="hidden sm:inline">IDHAYAM DTP CENTER</span>
+          <span className="sm:hidden">IDHAYAM</span>
         </Link>
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
@@ -38,8 +39,6 @@ export default function Header() {
           ))}
         </nav>
         <div className="flex items-center gap-2">
-          <Button variant="outline" className="hidden md:inline-flex rounded-full">Log In</Button>
-          <Button className="hidden md:inline-flex bg-primary hover:bg-primary/90 text-primary-foreground rounded-full">Sign Up</Button>
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="md:hidden">
@@ -49,9 +48,9 @@ export default function Header() {
             </SheetTrigger>
             <SheetContent side="right">
               <div className="flex flex-col gap-6 p-6">
-                <Link href="/" className="flex items-center gap-2 font-headline text-2xl font-bold text-primary mb-4" onClick={() => setOpen(false)}>
-                    <BookOpen className="h-7 w-7" />
-                    <span>Edugo</span>
+                <Link href="#home" className="flex items-center gap-2 font-headline text-2xl font-bold text-primary mb-4" onClick={() => setOpen(false)}>
+                    <Heart className="h-7 w-7" />
+                    <span>IDHAYAM</span>
                 </Link>
                 <nav className="flex flex-col gap-4">
                   {navLinks.map((link) => (
@@ -59,16 +58,12 @@ export default function Header() {
                       key={link.href}
                       href={link.href}
                       onClick={() => setOpen(false)}
-                      className="text-lg font-medium text-foreground/70 transition-colors hover:text-primary"
+                      className="text-xl font-medium text-foreground/80 transition-colors hover:text-primary"
                     >
                       {link.label}
                     </Link>
                   ))}
                 </nav>
-                <div className="flex flex-col gap-2 mt-auto">
-                    <Button variant="outline" className="rounded-full">Log In</Button>
-                    <Button className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full">Sign Up</Button>
-                </div>
               </div>
             </SheetContent>
           </Sheet>

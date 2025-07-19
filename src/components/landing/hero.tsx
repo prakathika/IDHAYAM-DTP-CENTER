@@ -1,40 +1,36 @@
-import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
+import { ArrowDown, Zap } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section id="home" className="py-20 md:py-32 bg-background">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6 text-center md:text-left">
-            <h1 className="font-headline text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-primary">
-              Unlock Your Potential with Edugo
-            </h1>
-            <p className="text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto md:mx-0">
-              Discover a world of knowledge with our cutting-edge online courses. Learn from industry experts and take your skills to the next level.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
-              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold rounded-full">
-                Explore Courses <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button size="lg" variant="outline" className="font-bold rounded-full border-2">
-                Learn More
-              </Button>
-            </div>
+    <section id="home" className="relative overflow-hidden py-24 md:py-40 bg-gradient-to-br from-primary/10 via-background to-background">
+      <div className="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary/20 rounded-full blur-3xl opacity-50 animate-pulse"></div>
+      <div className="absolute bottom-0 right-0 translate-x-1/2 translate-y-1/2 w-96 h-96 bg-accent/20 rounded-full blur-3xl opacity-50 animate-pulse-slow"></div>
+
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
+        <div className="flex flex-col items-center text-center space-y-8">
+          <div className="inline-flex items-center justify-center bg-primary/10 p-4 rounded-full mb-4 animate-bounce-slow">
+              <Zap className="h-12 w-12 text-primary" strokeWidth={1.5} />
           </div>
-          <div className="relative">
-            <Image
-              src="https://placehold.co/600x450.png"
-              alt="Students learning online"
-              width={600}
-              height={450}
-              className="rounded-2xl shadow-2xl mx-auto transform hover:scale-105 transition-transform duration-500"
-              data-ai-hint="online learning students"
-            />
+          
+          <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter text-foreground">
+            IDHAYAM DTP CENTER
+          </h1>
+          <p className="text-xl md:text-2xl text-foreground/80 max-w-3xl mx-auto">
+            Your One-Stop <span className="text-primary font-semibold">Digital Service</span> Solution
+          </p>
+          <p className="text-lg text-muted-foreground">Managed by <span className="font-semibold text-foreground">Jagadeesan</span></p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+            <a href="#services">
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold rounded-full text-lg px-8 py-6 transition-transform hover:scale-105">
+                    Explore Our Services <ArrowDown className="ml-2 h-5 w-5" />
+                </Button>
+            </a>
           </div>
         </div>
       </div>
     </section>
   );
 }
+

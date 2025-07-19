@@ -1,45 +1,56 @@
+import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { DollarSign, BrainCircuit, Users } from 'lucide-react';
+import { 
+    FileText, Landmark, Shield, GraduationCap, FileHeart, Link2, 
+    Bus, CircleUser, Home, Award, Fingerprint, Banknote, Briefcase, 
+    UserCheck, BookUser, Building, University, FileSearch, Globe
+} from 'lucide-react';
 
 const services = [
-  {
-    icon: <DollarSign className="h-10 w-10 text-primary" />,
-    title: 'Financial Literacy',
-    description: 'Master your finances with our comprehensive courses on budgeting, investing, and wealth management.',
-  },
-  {
-    icon: <Users className="h-10 w-10 text-primary" />,
-    title: 'UX Design',
-    description: 'Learn to create intuitive and beautiful user interfaces that people love to use. From wireframing to prototyping.',
-  },
-  {
-    icon: <BrainCircuit className="h-10 w-10 text-primary" />,
-    title: 'Emotional Intelligence',
-    description: 'Develop crucial soft skills, enhance self-awareness, and improve your personal and professional relationships.',
-  },
+    { icon: <FileText />, title: 'GST Services' },
+    { icon: <Landmark />, title: 'India Post' },
+    { icon: <Shield />, title: 'Indian Air Force/Army Jobs' },
+    { icon: <GraduationCap />, title: 'Jeevan Praman' },
+    { icon: <FileHeart />, title: 'LIC Online' },
+    { icon: <Award />, title: 'National Scholarship' },
+    { icon: <GraduationCap />, title: 'NEET Exam' },
+    { icon: <Fingerprint />, title: 'New PAN Card 2.0' },
+    { icon: <Link2 />, title: 'PAN-Aadhaar Linking' },
+    { icon: <Bus />, title: 'Parivahan' },
+    { icon: <CircleUser />, title: 'Passport Service' },
+    { icon: <Home />, title: 'PM-KISAN / PMAY' },
+    { icon: <FileText />, title: 'Birth & Death Certificate' },
+    { icon: <Link2 />, title: 'Aadhar Bank Linking' },
+    { icon: <BookUser />, title: 'eShram' },
+    { icon: <Briefcase />, title: 'Employment Registration' },
+    { icon: <Building />, title: 'EPFO' },
+    { icon: <UserCheck />, title: 'Voter ID' },
+    { icon: <Award />, title: 'Vidyadhan Scholarship' },
+    { icon: <University />, title: 'TNPSC / TNPDS / UPSC' },
+    { icon: <FileSearch />, title: 'TANGEDCO / TNEB' },
+    { icon: <GraduationCap />, title: 'RTE Admission' },
+    { icon: <Globe />, title: 'UGC NET / UID Card / SSC' },
 ];
 
 export default function Services() {
   return (
-    <section id="services" className="py-20 md:py-32 bg-secondary/50">
+    <section id="services" className="py-20 md:py-32 bg-secondary/30">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center space-y-4 mb-16">
-          <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary">Our Premier Courses</h2>
+          <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary">Our Services</h2>
           <p className="text-lg text-foreground/70 max-w-3xl mx-auto">
-            We offer a curated selection of courses designed to empower you with in-demand skills for the modern world.
+            A comprehensive range of digital services to meet all your needs under one roof.
           </p>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 md:gap-6">
           {services.map((service, index) => (
-            <Card key={index} className="flex flex-col items-center text-center p-8 shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300 rounded-2xl border-0">
-              <CardHeader className="p-0 mb-6">
-                <div className="bg-primary/10 p-4 rounded-full">
-                  {service.icon}
+            <Card key={index} className="group relative overflow-hidden text-center p-4 shadow-lg transition-all duration-300 rounded-2xl bg-background/50 backdrop-blur-sm hover:shadow-primary/20 hover:border-primary/50 hover:-translate-y-2 border">
+              <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <CardContent className="p-0 space-y-4 flex-grow flex flex-col justify-center items-center h-full relative z-10">
+                <div className="text-primary transition-transform duration-300 group-hover:scale-125">
+                  {React.cloneElement(service.icon, { className: "h-10 w-10 mx-auto" })}
                 </div>
-              </CardHeader>
-              <CardContent className="p-0 space-y-2 flex-grow">
-                <CardTitle className="font-headline text-2xl font-semibold">{service.title}</CardTitle>
-                <p className="text-foreground/70">{service.description}</p>
+                <p className="font-headline text-sm md:text-base font-semibold text-foreground/90">{service.title}</p>
               </CardContent>
             </Card>
           ))}

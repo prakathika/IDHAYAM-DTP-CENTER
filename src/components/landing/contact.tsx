@@ -1,62 +1,92 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
+import { Phone, Mail, MapPin } from 'lucide-react';
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-20 md:py-32 bg-background">
+    <section id="contact" className="py-20 md:py-32 bg-secondary/30">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div className="space-y-6">
-                <div className="space-y-3">
-                    <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary">Contact Us</h2>
-                    <p className="text-lg text-foreground/70">
-                        Have questions or want to enroll? Reach out to us! We're here to help you on your educational journey.
-                    </p>
+        <div className="text-center space-y-4 mb-16">
+          <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary">Get in Touch</h2>
+          <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
+            We're here to help with all your digital service needs. Contact us today!
+          </p>
+        </div>
+        <div className="grid md:grid-cols-2 gap-12 items-start">
+          <div className="space-y-8">
+            <Card className="bg-background/70 backdrop-blur-sm border-primary/20 p-6 rounded-2xl shadow-lg">
+              <CardContent className="p-0 space-y-6">
+                <h3 className="font-headline text-2xl font-bold text-primary">Contact Information</h3>
+                <div className="space-y-4 text-left">
+                  <p className="font-semibold text-lg text-foreground flex items-center gap-4">
+                    <span className="bg-primary/10 p-3 rounded-full flex items-center justify-center">
+                      <Phone className="h-5 w-5 text-primary" />
+                    </span>
+                    <div>
+                        <span className="font-normal text-sm text-muted-foreground">Phone</span>
+                        <a href="tel:7293148158" className="block text-primary hover:underline">7293148158</a>
+                    </div>
+                  </p>
+                  <p className="font-semibold text-lg text-foreground flex items-center gap-4">
+                    <span className="bg-primary/10 p-3 rounded-full flex items-center justify-center">
+                      <Mail className="h-5 w-5 text-primary" />
+                    </span>
+                    <div>
+                        <span className="font-normal text-sm text-muted-foreground">Email</span>
+                        <a href="mailto:idhayamdtpcenter@gmail.com" className="block text-primary hover:underline">idhayamdtpcenter@gmail.com</a>
+                    </div>
+                  </p>
+                  <p className="font-semibold text-lg text-foreground flex items-start gap-4">
+                    <span className="bg-primary/10 p-3 rounded-full flex items-center justify-center mt-1">
+                      <MapPin className="h-5 w-5 text-primary" />
+                    </span>
+                    <div>
+                        <span className="font-normal text-sm text-muted-foreground">Address</span>
+                        <span className="block text-foreground/90">1st Floor, Kannan Towers, Shop No 146, opp. to Bharat Petroleum, Hope College, Coimbatore - 641004</span>
+                    </div>
+                  </p>
                 </div>
-                <div className="space-y-4 pt-4">
-                    <p className="font-semibold text-lg text-foreground flex items-center gap-3">
-                        <span className="bg-primary/10 p-2 rounded-full">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 text-primary"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                        </span>
-                        <a href="tel:+1234567890" className="text-primary hover:underline">+1 (234) 567-890</a>
-                    </p>
-                    <p className="font-semibold text-lg text-foreground flex items-center gap-3">
-                        <span className="bg-primary/10 p-2 rounded-full">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 text-primary"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
-                        </span>
-                        <a href="mailto:contact@edugo.com" className="text-primary hover:underline">contact@edugo.com</a>
-                    </p>
-                </div>
-            </div>
-
-            <Card className="shadow-2xl rounded-2xl">
-                <CardHeader>
-                    <CardTitle className="font-headline text-2xl">Send us a Message</CardTitle>
-                    <CardDescription>We'll get back to you as soon as possible.</CardDescription>
-                </CardHeader>
-                <CardContent>
-                    <form className="space-y-4">
-                        <div className="space-y-2">
-                            <Label htmlFor="name">Name</Label>
-                            <Input id="name" placeholder="Your Name" className="rounded-full" />
-                        </div>
-                        <div className="space-y-2">
-                            <Label htmlFor="email">Email</Label>
-                            <Input id="email" type="email" placeholder="your@email.com" className="rounded-full" />
-                        </div>
-                        <div className="space-y-2">
-                            <Label htmlFor="message">Message</Label>
-                            <Textarea id="message" placeholder="Your message..." className="rounded-xl" rows={4} />
-                        </div>
-                        <Button type="submit" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-bold rounded-full">
-                            Send Message
-                        </Button>
-                    </form>
-                </CardContent>
+              </CardContent>
             </Card>
+
+            <Card className="bg-background/70 backdrop-blur-sm border-primary/20 rounded-2xl shadow-lg overflow-hidden">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.091173641217!2d77.0163580748093!3d11.03215205469736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba857b07d6a7f09%3A0xb33481432f2f754e!2sHOPES%2C%20Peelamedu%2C%20Coimbatore%2C%20Tamil%20Nadu%20641004!5e0!3m2!1sen!2sin!4v1700030005011!5m2!1sen!2sin" 
+                    width="100%" 
+                    height="300" 
+                    style={{ border:0 }} 
+                    allowFullScreen={true}
+                    loading="lazy" 
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Google Map of IDHAYAM DTP CENTER location"
+                ></iframe>
+            </Card>
+          </div>
+
+          <Card className="bg-background/70 backdrop-blur-sm border-primary/20 p-6 sm:p-8 rounded-2xl shadow-lg">
+            <h3 className="font-headline text-2xl font-bold text-primary mb-2">Send Us a Message</h3>
+            <p className="text-muted-foreground mb-6">We'll get back to you as soon as possible.</p>
+            <form className="space-y-6">
+              <div className="space-y-2">
+                <Label htmlFor="name" className="text-foreground/80">Name</Label>
+                <Input id="name" placeholder="Your Name" className="bg-background rounded-full" />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="email" className="text-foreground/80">Email</Label>
+                <Input id="email" type="email" placeholder="your@email.com" className="bg-background rounded-full" />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="message" className="text-foreground/80">Message</Label>
+                <Textarea id="message" placeholder="Your message..." className="bg-background rounded-xl" rows={5} />
+              </div>
+              <Button type="submit" size="lg" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-bold rounded-full transition-transform hover:scale-105">
+                Submit
+              </Button>
+            </form>
+          </Card>
         </div>
       </div>
     </section>
