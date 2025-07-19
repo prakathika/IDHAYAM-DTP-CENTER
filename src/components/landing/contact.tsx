@@ -21,7 +21,7 @@ export default function Contact() {
               <CardContent className="p-0 space-y-6">
                 <h3 className="font-headline text-2xl font-bold text-primary">Contact Information</h3>
                 <div className="space-y-4 text-left">
-                  <p className="font-semibold text-lg text-foreground flex items-center gap-4">
+                  <div className="font-semibold text-lg text-foreground flex items-center gap-4">
                     <span className="bg-primary/10 p-3 rounded-full flex items-center justify-center">
                       <Phone className="h-5 w-5 text-primary" />
                     </span>
@@ -29,8 +29,8 @@ export default function Contact() {
                         <span className="font-normal text-sm text-muted-foreground">Phone</span>
                         <a href="tel:7293148158" className="block text-primary hover:underline">7293148158</a>
                     </div>
-                  </p>
-                  <p className="font-semibold text-lg text-foreground flex items-center gap-4">
+                  </div>
+                  <div className="font-semibold text-lg text-foreground flex items-center gap-4">
                     <span className="bg-primary/10 p-3 rounded-full flex items-center justify-center">
                       <Mail className="h-5 w-5 text-primary" />
                     </span>
@@ -38,8 +38,8 @@ export default function Contact() {
                         <span className="font-normal text-sm text-muted-foreground">Email</span>
                         <a href="mailto:idhayamdtpcenter@gmail.com" className="block text-primary hover:underline">idhayamdtpcenter@gmail.com</a>
                     </div>
-                  </p>
-                  <p className="font-semibold text-lg text-foreground flex items-start gap-4">
+                  </div>
+                  <div className="font-semibold text-lg text-foreground flex items-start gap-4">
                     <span className="bg-primary/10 p-3 rounded-full flex items-center justify-center mt-1">
                       <MapPin className="h-5 w-5 text-primary" />
                     </span>
@@ -47,7 +47,7 @@ export default function Contact() {
                         <span className="font-normal text-sm text-muted-foreground">Address</span>
                         <span className="block text-foreground/90">1st Floor, Kannan Towers, Shop No 146, opp. to Bharat Petroleum, Hope College, Coimbatore - 641004</span>
                     </div>
-                  </p>
+                  </div>
                 </div>
               </CardContent>
             </Card>
