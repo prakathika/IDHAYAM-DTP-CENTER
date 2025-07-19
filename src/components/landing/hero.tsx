@@ -26,12 +26,9 @@ export default function Hero() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
             <a href="#services">
-              <Button size="lg" className="group text-lg font-bold relative inline-flex h-14 items-center justify-center overflow-hidden rounded-full bg-primary px-8 text-primary-foreground transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/50">
-                <span className="absolute -inset-full animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)] transition-opacity duration-500 group-hover:opacity-100"></span>
-                <span className="relative z-10 flex items-center gap-2">
-                  Explore Services
-                  <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
-                </span>
+              <Button size="lg" className="group text-lg font-bold h-14 rounded-full px-8 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/50">
+                Explore Services
+                <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
               </Button>
             </a>
             <a href="#contact">
