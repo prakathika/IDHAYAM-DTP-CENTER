@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, Heart } from 'lucide-react';
+import { Menu, CircuitBoard } from 'lucide-react';
 
 const navLinks = [
   { href: '#home', label: 'Home' },
@@ -27,7 +27,7 @@ export default function Header() {
     <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${isScrolled ? 'bg-background/80 backdrop-blur-lg shadow-md' : 'bg-transparent'}`}>
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="#home" className="flex items-center gap-2.5 font-headline text-2xl font-bold text-primary">
-          <Heart className="h-7 w-7" />
+          <CircuitBoard className="h-7 w-7" />
           <span className="hidden sm:inline">IDHAYAM DTP CENTER</span>
           <span className="sm:hidden">IDHAYAM</span>
         </Link>
@@ -49,7 +49,7 @@ export default function Header() {
             <SheetContent side="right">
               <div className="flex flex-col gap-6 p-6">
                 <Link href="#home" className="flex items-center gap-2 font-headline text-2xl font-bold text-primary mb-4" onClick={() => setOpen(false)}>
-                    <Heart className="h-7 w-7" />
+                    <CircuitBoard className="h-7 w-7" />
                     <span>IDHAYAM</span>
                 </Link>
                 <nav className="flex flex-col gap-4">
