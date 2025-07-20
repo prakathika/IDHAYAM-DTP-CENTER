@@ -42,30 +42,28 @@ export default function Hero() {
           </p>
           <p className="text-lg text-muted-foreground">Managed by <span className="font-semibold text-foreground">Jagadeesan</span></p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center items-center pt-4">
             <a href="#services">
               <Button size="lg" className="group text-lg font-bold h-14 rounded-full px-8 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/20">
                 Explore Services
                 <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
               </Button>
             </a>
-            <div className="flex items-center gap-4">
-                <a href="#contact">
-                   <Button size="lg" variant="outline" className="text-lg font-bold group relative inline-flex h-14 items-center justify-center overflow-hidden rounded-full border-2 border-primary/50 bg-transparent px-8 text-primary transition-all duration-300 hover:scale-105 hover:bg-transparent hover:text-foreground hover:shadow-lg hover:shadow-primary/20">
-                    <span className="absolute h-0 w-0 rounded-full bg-primary/10 transition-all duration-300 group-hover:h-56 group-hover:w-56"></span>
-                    <span className="relative z-10 flex items-center gap-2">
-                      <Phone className="h-5 w-5" />
-                      Get in Touch
-                    </span>
-                  </Button>
-                </a>
-                <a href="https://wa.me/7293148158" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-2 text-foreground/80 hover:text-primary transition-colors">
-                    <Button size="icon" variant="ghost" className="rounded-full bg-green-500/10 text-green-500 group-hover:bg-green-500/20">
-                        <WhatsAppIcon className="h-5 w-5" />
-                    </Button>
-                    <span className="font-semibold hidden sm:inline">WhatsApp</span>
-                </a>
-            </div>
+            <a href="#contact">
+               <Button size="lg" variant="outline" className="text-lg font-bold group relative inline-flex h-14 items-center justify-center overflow-hidden rounded-full border-2 border-primary/50 bg-transparent px-8 text-primary transition-all duration-300 hover:scale-105 hover:bg-transparent hover:text-foreground hover:shadow-lg hover:shadow-primary/20">
+                <span className="absolute h-0 w-0 rounded-full bg-primary/10 transition-all duration-300 group-hover:h-56 group-hover:w-56"></span>
+                <span className="relative z-10 flex items-center gap-2">
+                  <Phone className="h-5 w-5" />
+                  Get in Touch
+                </span>
+              </Button>
+            </a>
+            <a href="https://wa.me/7293148158" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="text-lg font-bold h-14 rounded-full px-8 bg-[#25D366] hover:bg-[#1DA851] text-white transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#25D366]/30">
+                    <WhatsAppIcon className="h-6 w-6" />
+                    Connect on WhatsApp
+                </Button>
+            </a>
           </div>
         </div>
       </div>
