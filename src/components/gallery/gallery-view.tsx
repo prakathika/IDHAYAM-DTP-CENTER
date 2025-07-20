@@ -62,6 +62,36 @@ const galleryItems = [
     hint: 'digital service center',
     title: 'General DTP Work',
   },
+  {
+    src: 'https://placehold.co/600x400.png',
+    alt: 'GST registration form on a computer screen.',
+    hint: 'gst registration',
+    title: 'GST Services',
+  },
+  {
+    src: 'https://placehold.co/600x400.png',
+    alt: 'Voter ID card illustration.',
+    hint: 'voter id card',
+    title: 'Voter ID Services',
+  },
+  {
+    src: 'https://placehold.co/600x400.png',
+    alt: 'Employment registration portal for job seekers.',
+    hint: 'job application',
+    title: 'Employment Registration',
+  },
+  {
+    src: 'https://placehold.co/600x400.png',
+    alt: 'Application for a birth certificate.',
+    hint: 'birth certificate',
+    title: 'Birth Certificate Applications',
+  },
+  {
+    src: 'https://placehold.co/600x400.png',
+    alt: 'A person applying for a government job online.',
+    hint: 'government job application',
+    title: 'Govt. Job Applications',
+  },
 ];
 
 export default function GalleryView() {
