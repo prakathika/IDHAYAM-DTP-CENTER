@@ -99,7 +99,7 @@ const galleryItems = [
     title: 'PM-KISAN / PMAY',
   },
   {
-    src: 'https://source.unsplash.com/O6NkG430Usk/600x400',
+    src: 'https://source.unsplash.com/sYffw0LNr7s/600x400',
     alt: 'Application for a birth or death certificate.',
     hint: 'birth certificate',
     title: 'Birth & Death Certificate',
@@ -111,25 +111,25 @@ const galleryItems = [
     title: 'Aadhar Bank Linking',
   },
   {
-    src: 'https://source.unsplash.com/Z42t1xdb3dI/600x400',
+    src: 'https://source.unsplash.com/wD1LRb9OeEo/600x400',
     alt: 'eShram card for unorganized workers.',
     hint: 'worker card',
     title: 'eShram',
   },
   {
-    src: 'https://source.unsplash.com/wD1LRb9OeEo/600x400',
+    src: 'https://source.unsplash.com/yv-h_an3_tY/600x400',
     alt: 'Employment registration portal for job seekers.',
     hint: 'job application',
     title: 'Employment Registration',
   },
   {
-    src: 'https://source.unsplash.com/yv-h_an3_tY/600x400',
+    src: 'https://source.unsplash.com/5fNmWej4tAA/600x400',
     alt: 'EPFO portal for provident fund services.',
     hint: 'provident fund',
     title: 'EPFO',
   },
   {
-    src: 'https://source.unsplash.com/sYffw0LNr7s/600x400',
+    src: 'https://source.unsplash.com/qL4-pI3yB40/600x400',
     alt: 'Voter ID card illustration.',
     hint: 'voter id',
     title: 'Voter ID',
@@ -159,7 +159,7 @@ const galleryItems = [
     title: 'RTE Admission',
   },
   {
-    src: 'https://source.unsplash.com/5fNmWej4tAA/600x400',
+    src: 'https://source.unsplash.com/Yv_o2s8s2G8/600x400',
     alt: 'UGC NET exam, UID Card, and SSC job application portals.',
     hint: 'online application',
     title: 'UGC NET / UID Card / SSC',
