@@ -24,7 +24,7 @@ const galleryItems = [
   {
     src: 'https://placehold.co/600x400.png',
     alt: 'A person getting their Aadhar card updated.',
-    hint: 'aadhaar card service',
+    hint: 'aadhaar card',
     title: 'Aadhar Card',
   },
   {
@@ -42,13 +42,13 @@ const galleryItems = [
   {
     src: 'https://placehold.co/600x400.png',
     alt: 'Indian Air Force and Army logos.',
-    hint: 'indian armed forces',
+    hint: 'indian armed',
     title: 'Indian Air Force/Army Jobs',
   },
   {
     src: 'https://placehold.co/600x400.png',
     alt: 'Jeevan Praman life certificate service.',
-    hint: 'digital life certificate',
+    hint: 'digital life-certificate',
     title: 'Jeevan Praman',
   },
   {
@@ -78,7 +78,7 @@ const galleryItems = [
   {
     src: 'https://placehold.co/600x400.png',
     alt: 'Linking PAN card with Aadhar card online.',
-    hint: 'pan aadhaar link',
+    hint: 'pan aadhaar',
     title: 'PAN-Aadhaar Linking',
   },
   {
@@ -132,7 +132,7 @@ const galleryItems = [
   {
     src: 'https://placehold.co/600x400.png',
     alt: 'Voter ID card illustration.',
-    hint: 'voter id card',
+    hint: 'voter id',
     title: 'Voter ID',
   },
   {
