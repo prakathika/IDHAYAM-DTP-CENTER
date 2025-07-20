@@ -5,16 +5,19 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, CircuitBoard } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { usePathname } from 'next/navigation';
 
 const navLinks = [
-  { href: '#home', label: 'Home' },
-  { href: '#services', label: 'Services' },
-  { href: '#contact', label: 'Contact' },
+  { href: '/', label: 'Home' },
+  { href: '/#services', label: 'Services' },
+  { href: '/gallery', label: 'Gallery' },
+  { href: '/#contact', label: 'Contact' },
 ];
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,13 +27,34 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const getLinkClass = (href: string) => {
+    const isHomePage = pathname === '/';
+    const isAnchor = href.startsWith('/#');
+    const isCurrentPage = isHomePage && (href === '/' || isAnchor) || pathname === href;
+
+    return cn(
+        "relative text-lg font-medium text-muted-foreground transition-colors hover:text-primary after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-full after:bg-primary after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out hover:after:scale-x-100 after:origin-left",
+        { 'text-primary': isCurrentPage }
+    );
+  }
+
+  const getMobileLinkClass = (href: string) => {
+      const isHomePage = pathname === '/';
+      const isAnchor = href.startsWith('/#');
+      const isCurrentPage = isHomePage && (href === '/' || isAnchor) || pathname === href;
+      return cn(
+        "text-xl font-medium text-foreground/80 transition-colors hover:text-primary",
+        { 'text-primary': isCurrentPage }
+      );
+  }
+
   return (
     <header className={cn(
         'sticky top-0 z-50 w-full transition-all duration-300', 
         isScrolled ? 'bg-background/80 backdrop-blur-lg shadow-md border-b' : 'bg-transparent'
     )}>
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
-        <Link href="#home" className="flex items-center gap-2.5 font-headline text-2xl font-bold text-primary">
+        <Link href="/" className="flex items-center gap-2.5 font-headline text-2xl font-bold text-primary">
             <CircuitBoard className="h-7 w-7" />
             <span className="hidden sm:inline">IDHAYAM DTP CENTER</span>
             <span className="sm:hidden">IDHAYAM</span>
@@ -41,7 +65,7 @@ export default function Header() {
               <Link 
                 key={link.href} 
                 href={link.href} 
-                className="relative text-lg font-medium text-muted-foreground transition-colors hover:text-primary after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-full after:bg-primary after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out hover:after:scale-x-100 after:origin-left"
+                className={getLinkClass(link.href)}
               >
                 {link.label}
               </Link>
@@ -58,7 +82,7 @@ export default function Header() {
             </SheetTrigger>
             <SheetContent side="right">
               <div className="flex flex-col gap-6 p-6">
-                <Link href="#home" className="flex items-center gap-2 font-headline text-2xl font-bold text-primary mb-4" onClick={() => setOpen(false)}>
+                <Link href="/" className="flex items-center gap-2 font-headline text-2xl font-bold text-primary mb-4" onClick={() => setOpen(false)}>
                     <CircuitBoard className="h-7 w-7" />
                     <span>IDHAYAM</span>
                 </Link>
@@ -68,7 +92,7 @@ export default function Header() {
                       key={link.href}
                       href={link.href}
                       onClick={() => setOpen(false)}
-                      className="text-xl font-medium text-foreground/80 transition-colors hover:text-primary"
+                      className={getMobileLinkClass(link.href)}
                     >
                       {link.label}
                     </Link>
