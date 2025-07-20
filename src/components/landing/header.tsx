@@ -55,7 +55,7 @@ export default function Header() {
     )}>
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2.5 font-headline text-2xl font-bold text-primary">
-            <Heart className="h-7 w-7" />
+            <Heart className="h-7 w-7 text-primary fill-primary" />
             <span className="hidden sm:inline">IDHAYAM DTP CENTER</span>
             <span className="sm:hidden">IDHAYAM</span>
         </Link>
@@ -83,7 +83,7 @@ export default function Header() {
             <SheetContent side="right">
               <div className="flex flex-col gap-6 p-6">
                 <Link href="/" className="flex items-center gap-2 font-headline text-2xl font-bold text-primary mb-4" onClick={() => setOpen(false)}>
-                    <Heart className="h-7 w-7" />
+                    <Heart className="h-7 w-7 text-primary fill-primary" />
                     <span>IDHAYAM</span>
                 </Link>
                 <nav className="flex flex-col gap-4">

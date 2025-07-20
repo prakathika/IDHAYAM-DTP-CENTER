@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="container mx-auto py-6 px-4 md:px-6">
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-2">
-                <Heart className="h-5 w-5 text-primary" />
+                <Heart className="h-5 w-5 text-primary fill-primary" />
                 <span className="font-headline text-lg font-bold text-primary">IDHAYAM DTP CENTER</span>
             </div>
             <p className="text-sm text-muted-foreground text-center sm:text-left">
