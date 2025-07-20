@@ -22,13 +22,13 @@ const galleryItems = [
     title: 'Lamination',
   },
   {
-    src: 'https://source.unsplash.com/Z42t1xdb3dI/600x400',
+    src: 'https://source.unsplash.com/g1Kr4Ozfoac/600x400',
     alt: 'A person getting their Aadhar card updated.',
     hint: 'aadhaar card',
     title: 'Aadhar Card',
   },
   {
-    src: 'https://source.unsplash.com/g1Kr4Ozfoac/600x400',
+    src: 'https://source.unsplash.com/3-pA_xM9p1k/600x400',
     alt: 'GST registration form on a computer screen.',
     hint: 'gst registration',
     title: 'GST Services',
@@ -70,7 +70,7 @@ const galleryItems = [
     title: 'NEET Exam',
   },
   {
-    src: 'https://source.unsplash.com/Z42t1xdb3dI/600x400',
+    src: 'https://source.unsplash.com/Yv_o2s8s2G8/600x400',
     alt: 'A new PAN card.',
     hint: 'pan card',
     title: 'New PAN Card 2.0',
@@ -106,7 +106,7 @@ const galleryItems = [
     title: 'Birth & Death Certificate',
   },
   {
-    src: 'https://source.unsplash.com/Z42t1xdb3dI/600x400',
+    src: 'https://source.unsplash.com/95YRwf6CNw8/600x400',
     alt: 'Linking Aadhar with bank account.',
     hint: 'bank service',
     title: 'Aadhar Bank Linking',
@@ -124,13 +124,13 @@ const galleryItems = [
     title: 'Employment Registration',
   },
   {
-    src: 'https://source.unsplash.com/Z42t1xdb3dI/600x400',
+    src: 'https://source.unsplash.com/yv-h_an3_tY/600x400',
     alt: 'EPFO portal for provident fund services.',
     hint: 'provident fund',
     title: 'EPFO',
   },
   {
-    src: 'https://source.unsplash.com/Z42t1xdb3dI/600x400',
+    src: 'https://source.unsplash.com/sYffw0LNr7s/600x400',
     alt: 'Voter ID card illustration.',
     hint: 'voter id',
     title: 'Voter ID',
