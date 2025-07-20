@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import { Card } from '@/components/ui/card';
 
@@ -23,7 +24,7 @@ const galleryItems = [
   {
     src: 'https://placehold.co/600x400.png',
     alt: 'A person getting their Aadhar card updated.',
-    hint: 'aadhar card service',
+    hint: 'aadhaar card service',
     title: 'Aadhar Card',
   },
   {
@@ -77,7 +78,7 @@ const galleryItems = [
   {
     src: 'https://placehold.co/600x400.png',
     alt: 'Linking PAN card with Aadhar card online.',
-    hint: 'pan aadhar link',
+    hint: 'pan aadhaar link',
     title: 'PAN-Aadhaar Linking',
   },
   {
@@ -178,7 +179,7 @@ export default function GalleryView() {
             A glimpse into the wide range of services we provide to our valued customers.
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {galleryItems.map((item, index) => (
             <Card
               key={index}
