@@ -43,13 +43,13 @@ export default function Services() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center space-y-4 mb-16">
           <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary">Our Services</h2>
-          <p className="text-lg text-foreground/70 max-w-3xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             A comprehensive range of digital services to meet all your needs under one roof.
           </p>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 md:gap-6">
           {services.map((service, index) => (
-            <Card key={index} className="group relative overflow-hidden text-center p-4 shadow-lg transition-all duration-300 rounded-2xl bg-background/50 backdrop-blur-sm hover:shadow-primary/20 hover:border-primary/50 hover:-translate-y-2 border">
+            <Card key={index} className="group relative overflow-hidden text-center p-4 shadow-lg transition-all duration-300 rounded-2xl bg-card/80 backdrop-blur-sm hover:shadow-primary/20 hover:border-primary/50 hover:-translate-y-2 border">
               <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <CardContent className="p-0 space-y-4 flex-grow flex flex-col justify-center items-center h-full relative z-10">
                 <div className="text-primary transition-transform duration-300 group-hover:scale-125">

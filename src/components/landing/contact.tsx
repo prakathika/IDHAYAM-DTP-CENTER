@@ -11,13 +11,13 @@ export default function Contact() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center space-y-4 mb-16">
           <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary">Get in Touch</h2>
-          <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             We're here to help with all your digital service needs. Contact us today!
           </p>
         </div>
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className="space-y-8">
-            <Card className="bg-background/70 backdrop-blur-sm border-primary/20 p-6 rounded-2xl shadow-lg">
+            <Card className="bg-card/80 backdrop-blur-sm border-border p-6 rounded-2xl shadow-lg">
               <CardContent className="p-0 space-y-6">
                 <h3 className="font-headline text-2xl font-bold text-primary">Contact Information</h3>
                 <div className="space-y-4 text-left">
@@ -52,7 +52,7 @@ export default function Contact() {
               </CardContent>
             </Card>
 
-            <Card className="bg-background/70 backdrop-blur-sm border-primary/20 rounded-2xl shadow-lg overflow-hidden">
+            <Card className="bg-card/80 backdrop-blur-sm border-border rounded-2xl shadow-lg overflow-hidden">
                 <iframe 
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.091173641217!2d77.0163580748093!3d11.03215205469736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba857b07d6a7f09%3A0xb33481432f2f754e!2sHOPES%2C%20Peelamedu%2C%20Coimbatore%2C%20Tamil%20Nadu%20641004!5e0!3m2!1sen!2sin!4v1700030005011!5m2!1sen!2sin" 
                     width="100%" 
@@ -66,7 +66,7 @@ export default function Contact() {
             </Card>
           </div>
 
-          <Card className="bg-background/70 backdrop-blur-sm border-primary/20 p-6 sm:p-8 rounded-2xl shadow-lg">
+          <Card className="bg-card/80 backdrop-blur-sm border-border p-6 sm:p-8 rounded-2xl shadow-lg">
             <h3 className="font-headline text-2xl font-bold text-primary mb-2">Send Us a Message</h3>
             <p className="text-muted-foreground mb-6">We'll get back to you as soon as possible.</p>
             <form className="space-y-6">

@@ -24,7 +24,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${isScrolled ? 'bg-background/80 backdrop-blur-lg shadow-md' : 'bg-transparent'}`}>
+    <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${isScrolled ? 'bg-background/80 backdrop-blur-lg shadow-md border-b' : 'bg-transparent'}`}>
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="#home" className="flex items-center gap-2.5 font-headline text-2xl font-bold text-primary">
           <CircuitBoard className="h-7 w-7" />
@@ -33,7 +33,7 @@ export default function Header() {
         </Link>
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <Link key={link.href} href={link.href} className="text-lg font-medium text-foreground/70 transition-colors hover:text-primary">
+            <Link key={link.href} href={link.href} className="text-lg font-medium text-muted-foreground transition-colors hover:text-primary">
               {link.label}
             </Link>
           ))}
