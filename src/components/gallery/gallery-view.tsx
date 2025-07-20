@@ -1,6 +1,5 @@
 
 import Image from 'next/image';
-import { Card } from '@/components/ui/card';
 
 const galleryItems = [
   {
@@ -179,27 +178,25 @@ export default function GalleryView() {
             A glimpse into the wide range of services we provide to our valued customers.
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
           {galleryItems.map((item, index) => (
-            <Card
+            <div
               key={index}
-              className="group overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:shadow-primary/20 hover:-translate-y-2 border"
+              className="group relative aspect-square overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:shadow-primary/30 hover:scale-105"
             >
-              <div className="relative aspect-video">
-                <Image
-                  src={item.src}
-                  alt={item.alt}
-                  fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  data-ai-hint={item.hint}
-                />
-              </div>
-              <div className="p-4 bg-card/80">
-                <h3 className="font-headline text-lg font-bold text-foreground">
+              <Image
+                src={item.src}
+                alt={item.alt}
+                fill
+                className="object-cover transition-transform duration-300 group-hover:scale-110"
+                data-ai-hint={item.hint}
+              />
+              <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <h3 className="font-headline text-lg font-bold text-white text-center p-2">
                   {item.title}
                 </h3>
               </div>
-            </Card>
+            </div>
           ))}
         </div>
       </div>
