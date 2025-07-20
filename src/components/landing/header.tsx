@@ -30,13 +30,13 @@ export default function Header() {
         isScrolled ? 'bg-background/80 backdrop-blur-lg shadow-md border-b' : 'bg-transparent'
     )}>
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
-        <div className="flex items-center gap-6">
-          <Link href="#home" className="flex items-center gap-2.5 font-headline text-2xl font-bold text-primary">
+        <Link href="#home" className="flex items-center gap-2.5 font-headline text-2xl font-bold text-primary">
             <CircuitBoard className="h-7 w-7" />
             <span className="hidden sm:inline">IDHAYAM DTP CENTER</span>
             <span className="sm:hidden">IDHAYAM</span>
-          </Link>
-          <nav className="hidden md:flex items-center gap-8">
+        </Link>
+        
+        <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <Link 
                 key={link.href} 
@@ -46,8 +46,7 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
-          </nav>
-        </div>
+        </nav>
         
         <div className="flex items-center gap-2">
           <Sheet open={open} onOpenChange={setOpen}>
