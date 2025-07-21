@@ -12,16 +12,16 @@ export default function Hero() {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="flex flex-col items-center text-center space-y-8">
 
-          <div className="w-full max-w-4xl mx-auto rounded-2xl shadow-2xl overflow-hidden border-4 border-primary/20 mb-8">
-            <Image
-              src="/home/user/studio/public/signboard.jpg"
-              alt="IDHAYAM DTP CENTER Sign Board"
-              width={1085}
-              height={452}
-              className="w-full h-auto object-cover"
-              priority
-            />
-          </div>
+         <div className="w-full max-w-4xl mx-auto rounded-2xl shadow-2xl overflow-hidden border-4 border-primary/20 mb-8">
+  <Image
+    src="/signboard.jpg" // ✅ Correct path from public/
+    alt="IDHAYAM DTP CENTER Sign Board"
+    width={1085}
+    height={452}
+    className="w-full h-auto object-cover"
+    priority
+  />
+</div>
 
           <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter">
             IDHAYAM DTP CENTER
