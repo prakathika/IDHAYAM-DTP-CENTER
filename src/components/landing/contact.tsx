@@ -27,7 +27,7 @@ export default function Contact() {
                     </span>
                     <div>
                         <span className="font-normal text-sm text-muted-foreground">Phone</span>
-                        <a href="tel:7293148158" className="block text-primary hover:underline">7293148158</a>
+                        <a href="tel:9345050422" className="block text-primary hover:underline">93450 50422</a>
                     </div>
                   </div>
                   <div className="font-semibold text-lg text-foreground flex items-center gap-4">
