@@ -14,7 +14,7 @@ export default function Hero() {
 
           <div className="w-full max-w-4xl mx-auto rounded-2xl shadow-2xl overflow-hidden border-4 border-primary/20 mb-8">
             <Image
-              src="/signboard.jpg"
+              src="/home/user/studio/public/signboard.jpg"
               alt="IDHAYAM DTP CENTER Sign Board"
               width={1085}
               height={452}
