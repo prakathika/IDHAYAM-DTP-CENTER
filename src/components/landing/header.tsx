@@ -8,9 +8,8 @@ import { cn } from '@/lib/utils';
 import { usePathname } from 'next/navigation';
 
 const navLinks = [
-  { href: '/', label: 'Home' },
+  { href: '/#home', label: 'Home' },
   { href: '/#services', label: 'Services' },
-  { href: '/gallery', label: 'Gallery' },
   { href: '/#contact', label: 'Contact' },
 ];
 
@@ -28,23 +27,16 @@ export default function Header() {
   }, []);
 
   const getLinkClass = (href: string) => {
-    const isHomePage = pathname === '/';
-    const isAnchor = href.startsWith('/#');
-    const isCurrentPage = isHomePage && (href === '/' || isAnchor) || pathname === href;
-
+    // For single-page scroll, active state logic could be more complex.
+    // This simplified version highlights based on basic href matching.
     return cn(
-        "relative text-lg font-medium text-muted-foreground transition-colors hover:text-primary after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-full after:bg-primary after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out hover:after:scale-x-100 after:origin-left",
-        { 'text-primary': isCurrentPage }
+        "relative text-lg font-medium text-muted-foreground transition-colors hover:text-primary after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-full after:bg-primary after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out hover:after:scale-x-100 after:origin-left"
     );
   }
 
   const getMobileLinkClass = (href: string) => {
-      const isHomePage = pathname === '/';
-      const isAnchor = href.startsWith('/#');
-      const isCurrentPage = isHomePage && (href === '/' || isAnchor) || pathname === href;
       return cn(
-        "text-xl font-medium text-foreground/80 transition-colors hover:text-primary",
-        { 'text-primary': isCurrentPage }
+        "text-xl font-medium text-foreground/80 transition-colors hover:text-primary"
       );
   }
 
